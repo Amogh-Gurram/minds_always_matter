@@ -1,14 +1,30 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Make sure you're using this
 import "@fontsource/lora";
 
 export default function HamburgerMenu() {
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(); // 🟢 Ref to the entire component
 
   const toggleMenu = () => setOpen(!open);
 
+  // 🟡 Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div style={{ position: 'relative' }}>
+    <div ref={menuRef} style={{ position: 'relative' }}>
       {/* Hamburger Icon */}
       <div
         onClick={toggleMenu}
@@ -27,7 +43,7 @@ export default function HamburgerMenu() {
             style={{
               height: '6px',
               width: '100%',
-              backgroundColor: '#ffdaed', // pastel pink tone
+              backgroundColor: '#ffdaed',
               borderRadius: '2px',
               transition: '0.3s ease',
             }}
@@ -42,22 +58,22 @@ export default function HamburgerMenu() {
             position: 'absolute',
             top: '45px',
             right: 0,
-            backgroundColor: '#2d4b2c', // deep green matching site
+            backgroundColor: '#2d4b2c',
             borderRadius: '12px',
             padding: '12px 16px',
             boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
             zIndex: 100,
             minWidth: '140px',
-            color: '#f4d3d3', // text matches the pink accent
+            color: '#f4d3d3',
             fontFamily: 'Lora',
             fontSize: '16px',
             animation: 'fadeIn 0.3s ease-in-out',
           }}
         >
-            <Link to="/purpose" style={linkStyle}>Purpose</Link>
-            <Link to="/about" style={linkStyle}>About Us</Link>
-            <Link to="/events" style={linkStyle}>Events</Link>
-            <Link to="/about" style={linkStyle}>Donate</Link>
+          <Link to="/purpose" style={linkStyle}>Purpose</Link>
+          <Link to="/about" style={linkStyle}>About Us</Link>
+          <Link to="/events" style={linkStyle}>Events</Link>
+          <Link to="/donate" style={linkStyle}>Donate</Link>
         </div>
       )}
     </div>

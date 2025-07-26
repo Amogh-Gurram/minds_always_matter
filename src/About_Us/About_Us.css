@@ -1,9 +1,9 @@
-#root {
-    text-align: center;
-    background-color: #5d7559;
-    width: 100vw;
-    height: auto;
-  }
+html, body, #root {
+  height: 100%;
+  background-color: #5d7559;
+  margin: 0;
+  padding: 0;
+}
   
   .logo {
     height: 6em;

@@ -9,7 +9,7 @@ import Melody_Image from '../assets/Melody_Image.jpg'
 
 export default function App() {
   return (
-    <div style={{ paddingTop: '20vh' }}>
+    <div style={{ paddingTop: '20vh', backgroundColor: '#5d7559'}}>
       <div>
         <h1 style={{ textAlign: 'center', fontFamily: 'Lora', color: '#ffdaed', marginBottom: '-10px', marginTop: '10px'}}>
           ABOUT US
