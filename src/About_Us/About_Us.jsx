@@ -4,7 +4,6 @@ import Anshu_Image from '../assets/Anshu_Image.jpg'
 import Divya_Image from '../assets/Divya_Image.jpg'
 import Kayla_Image from '../assets/Kayla_Image.jpg'
 import Kaylin_Image from '../assets/Kaylin_Image.jpg'
-import Melody_Image from '../assets/Melody_Image.jpg'
 
 
 export default function App() {
@@ -100,45 +99,7 @@ export default function App() {
                     TV, and traveling.
                 </p>
             </div>
-
-            <p 
-                style={{
-                    textAlign: 'left',
-                    fontFamily: 'Lora',
-                    color: '#ffdaed',
-                    marginBottom: '-20px',
-                    marginLeft:'22px',
-                    fontSize: '30px',
-                    fontWeight: 'bolder'
-                }}
-            > 
-                Social Media Manager 
-            </p>
-
-            <div
-                style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    marginTop: '0px'
-                }}
-            >
-                <img
-                    src={Melody_Image}
-                    className="logo"
-                    alt="Melody Image"
-                    style={{ height: 'auto', width:'20vw' }} // Ensure the image scales properly
-                />
-
-                <p style={{ textAlign: 'center', fontFamily: 'Lora', color: '#ffdaed', fontSize: '20px', width: '75vw', margin: '0 auto'}}>
-                    Tan Sin Khine Khant, one of the co-founders and the social media director of 
-                    Minds Always Matter, is going into her sophomore year of high school. She helped 
-                    create this organization because she wanted to spread awareness about mental health 
-                    and end the stigma around it. She enjoys shopping and socializing in her free time, 
-                    and wants to dedicate her time to interacting and helping people in an empowering way.
-                </p>
-            </div>
-
+            
             <p 
                 style={{
                     textAlign: 'left',
