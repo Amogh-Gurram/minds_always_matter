@@ -5,12 +5,95 @@ html, body, #root {
   padding: 0;
 }
   
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 1em #ffdaed);
-  }
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 1em #ffdaed);
+}
+
+.carousel-container {
+  /* This is the window through which you see the slides. */
+  padding-top: 20vh;
+  overflow: hidden; /* This is essential to hide the other slides */
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-color: #5d7559;
+}
+
+.carousel-title {
+  text-align: center;
+  font-family: 'Lora';
+  color: #ffdaed;
+  margin-bottom: 0px;
+}
+
+.carousel-slider {
+  /* This is the entire row of all the slides. */
+  display: flex;
+  transition: transform 0.6s ease-in-out; /* This makes the slide animation smooth */
+  height: 75vh;
+  margin-top: -50px;
+  /* The dynamic transform style in your JSX is correct, no need for a static one here. */
+}
+
+.carousel-tile {
+  /* Each individual slide */
+  width: 100vw;
+  flex-shrink: 0; /* Prevents the tiles from shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 5vw;
+  box-sizing: border-box;
+}
+
+
+.carousel-image {
+  width: 20vw;
+  height: auto;
+  border-radius: 10px;
+}
+
+.carousel-info {
+  max-width: 60vw;
+  color: #ffdaed;
+  font-family: 'Lora';
+}
+
+.carousel-role {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-description {
+  font-size: 20px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.carousel-button {
+  background-color: #ffdaed;
+  color: #5d7559;
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 0 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: #ffd0eb;
+}

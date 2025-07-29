@@ -39,7 +39,7 @@ export default function Header() {
                 </h1>
                 <p
                     style={{
-                        fontFamily: 'Noto Sans Georgian, sans-serif',
+                        fontFamily: 'Georgia, sans-serif',
                         color: '#ffdaed',
                         textAlign: 'center',
                         fontSize: '20px',

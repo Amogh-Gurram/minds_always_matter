@@ -28,6 +28,7 @@ const boxStyle = {
     fontFamily: 'Alice',
     fontSize: '16px',
     marginTop: '10px',
+    fontWeight: 'bold'
   };
   
 
@@ -35,11 +36,11 @@ export default function App() {
   return (
     <div style={{ paddingTop: '20vh' }}>
       <div>
-        <h1 style={{ textAlign: 'center', fontFamily: 'Alice', color: '#ffdaed', marginBottom: '20px', marginTop: '10px'}}>
+        <h1 style={{ textAlign: 'center', fontFamily: 'Alice', color: '#ffdaed', marginBottom: '20px', fontWeight: 'bold', marginTop: '10px'}}>
             Donate Today To Help Us Make a Difference
         </h1>
 
-        <p style={{ textAlign: 'center', fontFamily: 'Lora', color: '#ffdaed',fontSize: '20px', width: '75vw', margin: '0 auto'}}>
+        <p style={{ textAlign: 'center', fontFamily: 'Lora', color: '#ffdaed',fontSize: '20px', width: '75vw', margin: '0 auto', fontWeight: 'bold'}}>
             At Minds Always Matter, donations are a crucial part of running this program. 
             From hygiene kits and essential care items to stress relief toys, we will use 
             every dollar we receive to supply and support individuals who truly need it. 
@@ -53,6 +54,7 @@ export default function App() {
           justifyContent: 'center',
           flexWrap: 'wrap',
           gap: '30px',
+          fontWeight: 'bold',
           marginTop: '40px'
         }}>
           {/* Instagram */}
@@ -74,11 +76,6 @@ export default function App() {
           <a href="https://www.zellepay.com/" target="_blank" rel="noopener noreferrer" style={boxStyle}>
             <img src={ZelleIcon} alt="Zelle" style={imageStyle} />
             <p style={textStyle}>Zelle</p>
-          </a>
- 
-          <a href="#" style={boxStyle}>
-            <img src={PendingIcon} alt="Pending" style={imageStyle} />
-    <p style={textStyle}>Pending</p> 
           </a>
         </div>
       </div>
